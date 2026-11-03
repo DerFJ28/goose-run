@@ -58,7 +58,7 @@ Damit man das Spiel direkt im Browser spielen kann, fehlt noch: *Repo → Settin
 
 1. **Spielgefühl ist von Menschen noch nicht bewertet.** Frederick sollte Rückmeldung geben zu Tempo, Lückengröße, Steuerpräzision (zu träge/flott), Schweregrad. Danach gezielt an Konstanten schrauben: Startgeschwindigkeit, Beschleunigung in `update()`, Lückengröße in `spawnGate()`.
 2. GitHub Pages aktivieren (siehe oben), optional eine kleine Landingpage/Bilder.
-3. Die universelle Steuerung: „Leertaste = Flattern“ ist implementiert – prüfen, ob es sich im Spiel sinnvoll auswirkt oder nur Deko ist.
+3. **Leertaste = Flattern: geprüft und bestätigt (3.11.2026).** Headless-Test (Chrome-CDP gegen eine Testkopie mit `__test`-Hook): Ohne Space bleibt die Gans in der Schwebe (0 px Steigung über 0,5 s), mit gehaltener Space steigt sie ~179 px (mehrere Flügelschläge à −330 vy, Cooldown 0,14 s). Der Boost ist also ein echter Mechanismus, keine Deko. Ob die Stärke (~7 Aufwärtsimpulse/Sekunde) sich gut anfühlt, bleibt Fredericks Spielgefühl-Frage (siehe Punkt 1).
 4. Mögliche Erweiterungen: täglicher Highscore-Vergleich, Schwierigkeitsmodi, Soundtrack, „Endless-Zonen“ mit Themen (Nacht, Regen).
 5. Wartung: README bei größeren Änderungen aktualisieren, `screenshot.png` neu aufnehmen.
 
